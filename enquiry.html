@@ -18,19 +18,19 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="enquiry.html">Enquiry</a>
+        <a href="enquiry.html" class="active" aria-current="page">Enquiry</a>
     </nav>
 </header>
 
 <main>
     <h2>Vehicle enquiry</h2>
     <p>Complete the form below and a member of our team will contact you.</p>
-    <p>Fields marked in red are important.</p>
+    <p>Fields marked with * are required.</p>
 
     <form action="#" method="post">
         <div>
-            <label for="car">Vehicle</label>
-            <select id="car" name="car">
+            <label for="car">Vehicle *</label>
+            <select id="car" name="car" required>
                 <option value="">Choose a vehicle</option>
                 <option>2019 Hatch 1.0</option>
                 <option>2020 Trail 1.5</option>
@@ -40,26 +40,26 @@
         </div>
 
         <div>
-            <label for="name">Full name</label>
-            <input type="text" id="name" name="name" placeholder="e.g. Dave Smith">
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="name" placeholder="e.g. Dave Smith" autocomplete="name" required>
         </div>
 
         <div>
-            <label for="email">Email address</label>
-            <input type="text" id="email" name="email">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
         </div>
 
         <div>
-            <label for="phone">Telephone</label>
-            <input type="text" id="phone" name="phone">
+            <label for="phone">Telephone *</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[0-9 +()\-]{10,}" title="Enter a valid UK phone number" required>
         </div>
 
         <div>
             <label for="message">Your message</label>
-            <textarea id="message" name="message">Tell us what you would like to know...</textarea>
+            <textarea id="message" name="message" placeholder="Tell us what you would like to know..."></textarea>
         </div>
 
-        <div>
+        <div class="checkbox-row">
             <input type="checkbox" id="updates" name="updates">
             <label for="updates">Send me occasional offers and updates</label>
         </div>
@@ -76,7 +76,7 @@
             </fieldset>
         </div>
 
-        <button type="submit">SUBMIT</button>
+        <button type="submit" class="submit-btn">Send Enquiry</button>
     </form>
 
     <p>We aim to respond within two working days.</p>

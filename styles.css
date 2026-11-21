@@ -46,7 +46,6 @@ td {
 label {
     display: block;
 }
-
 input,
 select,
 textarea {
@@ -68,4 +67,13 @@ footer {
     width: 900px;
     margin: auto;
     font-size: 12px;
+}
+
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.vehicle {
+    margin-bottom: 50px;
 }
